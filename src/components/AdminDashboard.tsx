@@ -15,9 +15,13 @@ const AdminDashboard: React.FC = () => {
 
   // Dummy user list
   const users = [
-    { id: 1, name: 'Manu' },
-    { id: 2, name: 'Barca' },
-    { id: 3, name: 'User 3' },
+    { id: 1, name: 'akshay' },
+    { id: 3, name: 'saurabh' },
+    { id: 4, name: 'charan' },
+    { id: 5, name: 'nabbin' },
+    { id: 6, name: 'aravind' },
+    { id: 7, name: 'aditya' },
+    { id: 8, name: 'verma' },
   ];
 
   // Fetch players based on selected position
