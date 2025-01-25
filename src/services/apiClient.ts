@@ -2,7 +2,8 @@
 import axios from 'axios';
 // Create Axios instance with environment variable for baseURL
 const apiClient = axios.create({
-  baseURL: 'https://7ea9-122-172-86-128.ngrok-free.app/api/', // Default fallback
+  // baseURL: 'https://7ea9-122-172-86-128.ngrok-free.app/api/', // Default fallback
+  baseURL: 'https://bidverse-production.up.railway.app/api/',
   headers: {
     'Content-Type': 'application/json',
   },
