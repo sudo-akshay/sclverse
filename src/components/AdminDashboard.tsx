@@ -62,10 +62,7 @@ const AdminDashboard: React.FC = () => {
     setSelectedUser(event.target.value);
   };
 
-  // Handle final price input change
-  const handleFinalPriceChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setFinalPrice(event.target.value);
-  };
+  
 
   // Handle selling a player
   const handleSellPlayer = async () => {

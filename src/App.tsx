@@ -4,11 +4,9 @@ import LandingPage from './components/LandingPage';
 import LoginForm from './components/LoginForm';
 import AdminDashboard from './components/AdminDashboard';
 import UserDashboard from './components/UserDashboard';
-import UserHome from "./components/UserHome";
 import PlayerSearch from "./components/PlayerSearch";
 import Wishlist from "./components/Wishlist";
 import Hatewatch from "./components/HateWatch";
-import HateWatch from './components/HateWatch';
 const App: React.FC = () => {
   return (
     <Router>

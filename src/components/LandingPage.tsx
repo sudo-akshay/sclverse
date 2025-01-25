@@ -1,6 +1,6 @@
 // src/components/LandingPage.tsx
 import React, { useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import apiClient from '../services/apiClient';
 import { handleApiError } from '../utils/errorHandler';
 import './LandingPage.css'; // Custom styles for the landing page
