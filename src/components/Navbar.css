@@ -1,0 +1,35 @@
+/* navbar.css */
+
+/* NavBar */
+.navbarA {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #1e3c72;
+  color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100; /* Ensuring navbar is on top */
+}
+
+.navbar-leftA h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.navbar-rightA a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.navbar-rightA a:hover {
+  background-color: #3b4a7b;
+}

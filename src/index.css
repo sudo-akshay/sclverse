@@ -1,0 +1,22 @@
+/* Reset margin and padding for the whole document */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ensure html and body take full height */
+html, body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* The root element must take the full height to occupy the whole page */
+#root {
+  display: flex;
+  flex: 1;
+  height: 100%;
+  width: 100%;
+}

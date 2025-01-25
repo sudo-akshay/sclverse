@@ -1,0 +1,87 @@
+/* src/components/LandingPage.css */
+
+/* Full-page styling for the landing page */
+.landing-page {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;    /* Centers vertically */
+    height: 100vh;          /* Full viewport height */
+    width: 100vw;           /* Full viewport width */
+    background: linear-gradient(135deg, #1e3c72, #2a5298); /* Stylish gradient */
+    color: white;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Prevents padding from affecting width/height */
+    text-align: center;
+  }
+  
+  /* Container for the login form */
+  .login-container {
+    background: rgba(255, 255, 255, 0.1); /* Slightly transparent background */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    width: 350px;
+    text-align: center;
+  }
+  
+  /* Login form styling */
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+  
+  /* Form group styling */
+  .form-group {
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+  
+  /* Labels */
+  label {
+    font-size: 0.9rem;
+    color: #e0e0e0;
+  }
+  
+  /* Input fields */
+  input {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+    outline: none;
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    color: white;
+  }
+  
+  input::placeholder {
+    color: #d3d3d3;
+  }
+  
+  /* Submit button */
+  .login-button {
+    padding: 0.7rem;
+    background: #4caf50;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .login-button:hover {
+    background: #45a049;
+  }
+  
+  /* Error message styling */
+  .error {
+    color: #f44336;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
