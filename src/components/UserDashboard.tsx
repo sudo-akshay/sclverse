@@ -36,6 +36,9 @@ const UserDashboard: React.FC = () => {
     }
   }, []); // Runs only once when the component mounts
 
+  const location = useLocation(); // Hook to get the current location/path
+
+
   useEffect(() => {
     const fetchPlayers = async () => {
       if (!userId) {
@@ -46,9 +49,12 @@ const UserDashboard: React.FC = () => {
         // Fetching players specific to the logged-in user
         const response = await apiClient.post(`/players/sold?userId=${userId}`);
 
-        // Check if response data is an array
-        const data = Array.isArray(response.data) ? response.data : [];
-        setPlayers(data); // Update state only if it's a valid array
+        const {remainingFunds , players} =response.data;
+
+        setPlayers(Array.isArray(players)? players : []);
+
+        setAvailablePurse(remainingFunds);
+        localStorage.setItem('availablePurse',remainingFunds.toString());
         setLoading(false);
       } catch (error) {
         console.error('Error fetching players:', error);
@@ -57,7 +63,7 @@ const UserDashboard: React.FC = () => {
     };
 
     fetchPlayers();
-  }, [userId]); // Re-run the effect if userId changes
+  }, [userId, location.pathname]); // Re-run the effect if userId changes
 
   // Group players by position category
   const groupPlayersByPosition = (players: Player[]) => {
@@ -73,7 +79,6 @@ const UserDashboard: React.FC = () => {
 
   const groupedPlayers = groupPlayersByPosition(players);
 
-  const location = useLocation(); // Hook to get the current location/path
 
   // Determine if the current path is one of the dashboard paths
   const isDashboardPage = location.pathname.startsWith('/user-dashboard') && !['/user-dashboard/players', '/user-dashboard/wishlist', '/user-dashboard/hatewatch'].includes(location.pathname);

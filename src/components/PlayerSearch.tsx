@@ -19,6 +19,7 @@ interface Player {
   club: string;
   basePrice: number;
   imageUrl: string;
+  status : string;
   wishlistedUsers: number[];
 }
 
@@ -228,6 +229,7 @@ const PlayerSearch: React.FC = () => {
             <th>Age</th>
             <th>Club</th>
             <th>Base Price</th>
+            <th>Status</th>
             <th>Action</th>
           </tr>
         </thead>
@@ -246,6 +248,7 @@ const PlayerSearch: React.FC = () => {
               <td>{player.age}</td>
               <td>{player.club}</td>
               <td>${player.basePrice}</td>
+              <td>{player.status}</td>
               <td>
                 <button
                   className="wishlist-button"
